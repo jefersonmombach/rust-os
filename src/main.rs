@@ -4,7 +4,7 @@
 use core::panic::PanicInfo;
 
 #[unsafe(no_mangle)]
-pub extern "C" fn _main() -> ! {
+pub extern "C" fn _start() -> ! {
     loop {}
 }
 
