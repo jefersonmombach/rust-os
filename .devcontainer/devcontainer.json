@@ -1,6 +1,9 @@
 {
   "name": "rust-os",
   "image": "mcr.microsoft.com/devcontainers/rust:1-1-bookworm",
+  "containerEnv": {
+    "RUSTUP_TOOLCHAIN": "nightly"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -9,6 +12,5 @@
       ]
     }
   },
-  "postCreateCommand": "rustc --version && cargo --version"
+  "postCreateCommand": "rustup toolchain install nightly && rustc --version && cargo --version"
 }
-
